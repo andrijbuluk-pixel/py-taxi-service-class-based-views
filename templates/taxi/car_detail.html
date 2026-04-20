@@ -1,8 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-	<h1>Car name: {{ car.model }}</h1>
-	<p><strong>Country: {{ car.manufacturer.country }}</strong></p>
+	<h1>Car details</h1>
+	<ul>
+		<li><strong>Manufacturer : {{ car.manufacturer.name }}</strong></li>
+		<li><strong>Country: {{ car.manufacturer.country }}</strong></li>
+	</ul>
 
 	<div>
 		<h3>Car Detail</h3>

@@ -1,14 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-	<div>
-		<h3>Car this driver</h3>
+	<h3>Car this driver</h3>
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>Model</th>
+			<th>Manufacturer</th>
+
+		</tr>
 		{% for car in driver.cars.all %}
-			<hr>
-			<p>{{ car.model }}</p>
+			<tr>
+				<td>{{ car.id }}</td>
+				<td>{{ car.model }}</td>
+				<td>{{ car.manufacturer.name }}</td>
+			</tr>
 		{% empty %}
 			This driver does not have a car
 		{% endfor %}
-	</div>
-
+	</table>
 {% endblock %}
