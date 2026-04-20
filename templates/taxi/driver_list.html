@@ -2,7 +2,7 @@
 
 {% block content %}
 	{% if driver_list %}
-		<table>
+		<table class="table table-hover">
 			{% for driver in driver_list %}
 				<li><a href="{% url 'taxi:driver-detail' driver.id %}">{{ driver.username }}</a></li>
 			{% endfor %}
