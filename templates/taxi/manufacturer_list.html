@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+	{% for manufacture in manufacturer_list %}
+		<p>{{ manufacture.name }}</p>
+	{% endfor %}
+{% endblock %}
