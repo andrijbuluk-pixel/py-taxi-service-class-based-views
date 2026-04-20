@@ -2,18 +2,26 @@
 
 {% block content %}
 	<h1>Car details</h1>
-	<ul>
-		<li><strong>Manufacturer : {{ car.manufacturer.name }}</strong></li>
-		<li><strong>Country: {{ car.manufacturer.country }}</strong></li>
-	</ul>
-
-	<div>
-		<h3>Car Detail</h3>
+	<table class="table table-hover">
+		<tr>
+			<th>ID</th>
+			<th>Username</th>
+			<th>First name</th>
+			<th>Last name</th>
+			<th>License number</th>
+		</tr>
 
 		{% for production in car.drivers.all %}
-			<hr>
-			<p>{{ production.username }}: ({{ production.last_name }} {{ production.first_name }})</p>
+			<tr>
+				<td>{{ production.id }}</td>
+				<td>{{ production.username }}</td>
+				<td>{{ production.first_name }}</td>
+				<td>{{ production.last_name }}</td>
+			<td>{{ production.license_number }}</td>
+
+			</tr>
 		{% endfor %}
-	</div>
+
+	</table>
 
 {% endblock %}
